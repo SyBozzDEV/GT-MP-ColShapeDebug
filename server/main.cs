@@ -15,23 +15,10 @@ namespace ColShape.server
 		public main()
 		{
 			API.onResourceStop += onResourceStopHandler;
-			API.onPlayerFinishedDownload += onPlayerFinishedDownloadHandler;
-		}
-
-		private void onPlayerFinishedDownloadHandler(Client player)
-		{
-			if (twoDColShape != null) API.shared.triggerClientEvent(player, "draw2DColShape", twoDColShape.X, twoDColShape.Y, twoDColShape.Width, twoDColShape.Height, twoDColShape.handle);
-			if (threeDcolShape != null) API.shared.triggerClientEvent(player, "draw3DColShape", threeDcolShape.Start, threeDcolShape.End, threeDcolShape.handle);
-			if (cylinderColShape != null) API.shared.triggerClientEvent(player, "drawCylinderColShape", cylinderColShape.Center, cylinderColShape.Range, cylinderColShape.Height, cylinderColShape.handle);
-			if (sphereColShape != null) API.shared.triggerClientEvent(player, "drawSphereColShape", sphereColShape.Center, sphereColShape.Range, sphereColShape.handle);
 		}
 
 		private void onResourceStopHandler()
 		{
-			API.shared.deleteColShape(threeDcolShape);
-			API.shared.deleteColShape(twoDColShape);
-			API.shared.deleteColShape(cylinderColShape);
-			API.shared.deleteColShape(sphereColShape);
 			API.shared.triggerClientEventForAll("delColShape");
 		}
 
@@ -39,6 +26,7 @@ namespace ColShape.server
 		{
 			if (stat)
 			{
+				twoDColShape = colshape;
 				API.shared.triggerClientEventForAll("draw2DColShape", colshape.X, colshape.Y, colshape.Width, colshape.Height, colshape.handle);
 				colshape.onEntityEnterColShape += onEntityEnterColShapeHandler;
 			}
@@ -50,6 +38,7 @@ namespace ColShape.server
 		{
 			if (stat)
 			{
+				threeDcolShape = colshape;
 				API.shared.triggerClientEventForAll("draw3DColShape", colshape.Start, colshape.End, colshape.handle);
 				colshape.onEntityEnterColShape += onEntityEnterColShapeHandler;
 			}
@@ -60,6 +49,7 @@ namespace ColShape.server
 		{
 			if (stat)
 			{
+				cylinderColShape = colshape;
 				API.shared.triggerClientEventForAll("drawCylinderColShape", colshape.Center, colshape.Range, colshape.Height, colshape.handle);
 				colshape.onEntityEnterColShape += onEntityEnterColShapeHandler;
 			}
@@ -70,6 +60,7 @@ namespace ColShape.server
 		{
 			if (stat)
 			{
+				sphereColShape = colshape;
 				API.shared.triggerClientEventForAll("drawSphereColShape", colshape.Center, colshape.Range, colshape.handle);
 				colshape.onEntityEnterColShape += onEntityEnterColShapeHandler;
 			}

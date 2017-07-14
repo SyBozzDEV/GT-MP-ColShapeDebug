@@ -1,4 +1,5 @@
-﻿using GrandTheftMultiplayer.Server.API;
+﻿/*
+using GrandTheftMultiplayer.Server.API;
 using GrandTheftMultiplayer.Shared.Math;
 
 namespace ColShape.server
@@ -22,4 +23,4 @@ namespace ColShape.server
 			main.sphereColShape.draw();
 		}
 	}
-}
+}*/
