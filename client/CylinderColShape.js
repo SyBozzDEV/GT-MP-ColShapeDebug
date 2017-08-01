@@ -17,7 +17,7 @@ class cylinderColShape {
 				this.x_1 = this.pos.X + (Math.cos(i * (Math.PI / 180)) * this.range);
 				this.y_1 = this.pos.Y + (Math.sin(i * (Math.PI / 180)) * this.range);
 
-				this.line_1s = new Vector3(this.x_1, this.y_1, this.pos.Z);
+				this.line_1s = new Vector3(this.x_1, this.y_1, this.pos.Z + this.height);
 				this.line_1e = new Vector3(this.x_1, this.y_1, this.pos.Z - this.height);
 				API.drawLine(this.line_1s, this.line_1e, 255, 255, 0, 0);
 			}
