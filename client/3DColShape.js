@@ -1,9 +1,10 @@
 ﻿
-class threeDcolShape {
-	constructor(_start, _end, _id) {
-		this.start = _start;
-		this.end = _end;
-		this.id = _id;
+class ThreeDcolShape {
+	constructor(start, end, id) {
+		this.start = start;
+		this.end = end;
+        this.id = id;
+	    this.bool = false;
 		this.calculate();
 	}
 
@@ -15,7 +16,6 @@ class threeDcolShape {
 		this.line_5e = new Vector3(this.start.X, this.end.Y, this.end.Z);
 		this.line_6e = new Vector3(this.start.X, this.start.Y, this.end.Z);
 		this.line_7e = new Vector3(this.end.X, this.start.Y, this.end.Z);
-
 
 		this.bool = true;
 	}
@@ -40,34 +40,25 @@ class threeDcolShape {
 	}
 }
 
-//var colArray = [];
 var colShape = null;
 
 API.onServerEventTrigger.connect(
 	function (eventName, args) {
-		if (eventName == "draw3DColShape") {
-			//colArray.push(new threeDcolShape(args[0], args[1], args[2]));
+		if (eventName === "draw3DColShape") {
 			colShape = null;
-			colShape = new threeDcolShape(args[0], args[1], args[2]);
+			colShape = new ThreeDcolShape(args[0], args[1], args[2]);
 		}
-		else if (eventName == "del3DColShape") {
-			//colArray = [];
+		else if (eventName === "del3DColShape") {
 			colShape = null;
 		}
-		else if (eventName == "delColShape") {
-			//colArray = [];
+		else if (eventName === "delColShape") {
 			colShape = null;
 		}
 	}
 );
 
 API.onUpdate.connect(
-	function () {/*
-		if (colArray.length > 0) {
-			for (i = 0; i < colArray.length; i++) {
-				colArray[i].draw();
-			}
-		}*/
+	function () {
 		if (colShape != null) {
 			colShape.draw();
 		}

@@ -2,13 +2,13 @@
 
 For all who want to see they colshapes.
 
-* [Create2DColShape] (https://wiki.gt-mp.net/index.php?title=Create2DColShape)
+* [Create2DColShape](https://wiki.gt-mp.net/index.php?title=Create2DColShape)
 
-* [Create3DColShape] (https://wiki.gt-mp.net/index.php?title=Create3DColShape)
+* [Create3DColShape](https://wiki.gt-mp.net/index.php?title=Create3DColShape)
 
-* [CreateCylinderColShape] (https://wiki.gt-mp.net/index.php?title=CreateCylinderColShape)
+* [CreateCylinderColShape](https://wiki.gt-mp.net/index.php?title=CreateCylinderColShape)
 
-* [CreateSphereColShape] (https://wiki.gt-mp.net/index.php?title=CreateSphereColShape)
+* [CreateSphereColShape](https://wiki.gt-mp.net/index.php?title=CreateSphereColShape)
 
 ## How to use this:
 

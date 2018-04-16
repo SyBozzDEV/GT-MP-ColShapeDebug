@@ -2,11 +2,11 @@
 
 namespace ColShape.server
 {
-	public static class extensions
+	public static class Extensions
 	{
-		public static void draw(this Rectangle2DColShape colshape, bool stat = true) { main.draw2DColShape(colshape, stat); }
-		public static void draw(this Rectangle3DColShape colshape, bool stat = true) { main.draw3DColShape(colshape, stat);	}
-		public static void draw(this CylinderColShape colshape, bool stat = true) { main.drawCylinderColShape(colshape, stat); }
-		public static void draw(this SphereColShape colshape, bool stat = true) { main.drawSphereColShape(colshape, stat); }
+		public static void Draw(this Rectangle2DColShape colshape, bool draw = true) { Main.Draw2DColShape(colshape, draw); }
+		public static void Draw(this Rectangle3DColShape colshape, bool draw = true) { Main.Draw3DColShape(colshape, draw);	}
+		public static void Draw(this CylinderColShape colshape, bool draw = true) { Main.DrawCylinderColShape(colshape, draw); }
+		public static void Draw(this SphereColShape colshape, bool draw = true) { Main.DrawSphereColShape(colshape, draw); }
 	}
 }
