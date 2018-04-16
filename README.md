@@ -20,7 +20,7 @@ For all who want to see they colshapes.
 
 * **4.** Add this to your files where the shape create " using ColShape.server; "
 
-* **5.** Create your shape API.shared.create3DColShape(new Vector3(10, 0, 70), new Vector3(15, 5, 75)); and add the draw(); like in the example.
+* **5.** Create your shape API.shared.create3DColShape(new Vector3(10, 0, 70), new Vector3(15, 5, 75)); and add the Draw(); like in the example.
 
 ```xml
     <meta>
@@ -51,8 +51,8 @@ For all who want to see they colshapes.
         private static void onPlayerFinishedDownloadHandler(Client player)
         {
             var shape = API.shared.create3DColShape(new Vector3(10, 0, 70), new Vector3(15, 5, 75));
-            shape.draw();
-            //API.shared.create3DColShape(new Vector3(10, 0, 70), new Vector3(15, 5, 75)).draw(); // worked too
+            shape.Draw();
+            //API.shared.create3DColShape(new Vector3(10, 0, 70), new Vector3(15, 5, 75)).Draw(); // worked too
         }
     }
 ```
@@ -62,13 +62,13 @@ For all who want to see they colshapes.
 
 There are 4 shape types and it can only draw one for every type at the time
 
-this is the last shape with .draw();
+this is the last shape with .Draw();
 
 If you have a big shape please draw only one per time.
 
 FPS can go down to 15 or less when your shapes to big.
 
-When you use .draw(); before you join you can`t see the shape
+When you use .Draw(); before you join you can`t see the shape
 
 for that create the shape after join or restart your resource with command.
 
